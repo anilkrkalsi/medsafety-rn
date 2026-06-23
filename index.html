@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>MedSafety RN – NCLEX-Style Medication Safety Practice</title>
+
+  <meta name="description" content="Practice NCLEX-style medication safety questions for nursing learners. 100 included questions, 700 total with Pro, offline-first after install, no account required." />
+
+  <style>
+    :root {
+      --navy: #071A2C;
+      --navy2: #102D44;
+      --teal: #00C2B8;
+      --amber: #F5A623;
+      --white: #FFFFFF;
+      --soft: #D7E3EA;
+      --card: rgba(255, 255, 255, 0.08);
+      --border: rgba(255, 255, 255, 0.16);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, var(--navy), var(--navy2));
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 26px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .hero {
+      padding: 70px 0 56px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--soft);
+      background: rgba(255, 255, 255, 0.06);
+      margin-bottom: 18px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.04;
+      margin: 0 0 20px;
+      letter-spacing: -0.06em;
+    }
+
+    .hero p {
+      color: var(--soft);
+      font-size: 20px;
+      max-width: 680px;
+      margin: 0 0 30px;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--teal);
+      color: #04252A;
+      font-weight: 800;
+      padding: 15px 22px;
+      border-radius: 14px;
+      box-shadow: 0 12px 30px rgba(0, 194, 184, 0.24);
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid var(--border);
+      box-shadow: none;
+    }
+
+    .phone-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+    }
+
+    .mock {
+      background: #f4f1fb;
+      color: #211A35;
+      border-radius: 24px;
+      padding: 28px;
+      min-height: 420px;
+    }
+
+    .mock h2 {
+      color: #514195;
+      font-size: 32px;
+      line-height: 1.18;
+      margin: 0 0 18px;
+    }
+
+    .mock .option {
+      background: #fff;
+      border: 1px solid #ded9eb;
+      border-radius: 16px;
+      padding: 14px 16px;
+      margin: 12px 0;
+      font-size: 17px;
+    }
+
+    section {
+      padding: 44px 0;
+    }
+
+    h2 {
+      font-size: 34px;
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+      margin: 0 0 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 24px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 21px;
+    }
+
+    .card p,
+    .card li,
+    section p,
+    footer p {
+      color: var(--soft);
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .highlight {
+      color: var(--amber);
+      font-weight: 800;
+    }
+
+    .disclaimer {
+      font-size: 14px;
+      color: var(--soft);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid var(--border);
+      margin-top: 30px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 850px) {
+      .hero,
+      .grid,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 46px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="brand">MedSafety RN</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div>
+        <span class="eyebrow">Independent educational practice app</span>
+        <h1>NCLEX-style medication safety practice for nursing learners.</h1>
+        <p>
+          Practice medication administration, adverse effects, contraindications,
+          lab monitoring, high-alert medication awareness, patient teaching, and
+          common safety decision patterns.
+        </p>
+
+```
+    <div class="cta-row">
+      <a class="button" href="https://play.google.com/store/apps/details?id=com.sadhoo.medsafety_rn" target="_blank" rel="noopener">
+        Download on Google Play
+      </a>
+      <a class="button secondary" href="#features">
+        See features
+      </a>
+    </div>
+  </div>
+
+  <div class="phone-card">
+    <div class="mock">
+      <h2>Practice RN Medication Safety</h2>
+      <p><strong>Question 1/20</strong></p>
+      <p>A patient taking a medication develops signs of a serious adverse effect. What should the nurse recognize?</p>
+      <div class="option">A. Incorrect option</div>
+      <div class="option">B. Another option</div>
+      <div class="option">C. Correct safety decision</div>
+      <div class="option">D. Distractor option</div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="container">
+  <h2>What you get</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>100 included questions</h3>
+      <p>Start practicing medication-safety questions without account creation.</p>
+    </div>
+
+    <div class="card">
+      <h3>700 total with Pro</h3>
+      <p>Unlock the full 700-question roadmap with one Pro upgrade. No subscription is required.</p>
+    </div>
+
+    <div class="card">
+      <h3>NCLEX-style practice</h3>
+      <p>Practice focused nursing decision patterns instead of random memorization.</p>
+    </div>
+
+    <div class="card">
+      <h3>Rationales</h3>
+      <p>Review explanations after answers so missed questions become learning points.</p>
+    </div>
+
+    <div class="card">
+      <h3>Weak-area review</h3>
+      <p>Identify repeated weak decision areas and return to focused practice.</p>
+    </div>
+
+    <div class="card">
+      <h3>No login required</h3>
+      <p>Practice progress is stored locally on your device.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <h2>Medication-safety topics covered</h2>
+  <div class="split">
+    <div class="card">
+      <ul>
+        <li>Medication administration decisions</li>
+        <li>Adverse effects</li>
+        <li>Contraindications</li>
+        <li>High-alert medication awareness</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <ul>
+        <li>Lab monitoring</li>
+        <li>Patient teaching</li>
+        <li>Safety accuracy tracking</li>
+        <li>Missed-question review</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <h2>Free vs Pro</h2>
+  <div class="split">
+    <div class="card">
+      <h3>Included</h3>
+      <p><span class="highlight">100 medication-safety practice questions</span> with rationales and progress tracking.</p>
+    </div>
+
+    <div class="card">
+      <h3>Pro unlock</h3>
+      <p><span class="highlight">700 total reviewed questions</span>, complete roadmap access, and full weak-area review. One-time upgrade. No subscription.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <h2>Offline-first after install</h2>
+  <p>
+    Practice questions and progress are designed for local use after install.
+    App updates and Pro purchases require Google Play/internet access.
+  </p>
+</section>
+
+<section class="container">
+  <h2>Important disclaimer</h2>
+  <div class="disclaimer">
+    <p>
+      MedSafety RN is an independent educational practice app. It is not medical advice,
+      clinical instruction, diagnosis, treatment guidance, or a substitute for nursing school,
+      licensed instruction, institutional policy, medication references, or professional judgment.
+    </p>
+    <p>
+      This app is not a medical device and does not diagnose, treat, cure, or prevent any
+      medical condition. Consult a qualified healthcare professional for medical advice,
+      diagnosis, or treatment.
+    </p>
+    <p>
+      MedSafety RN is not affiliated with, endorsed by, sponsored by, or officially provided by
+      NCSBN, NCLEX, Pearson VUE, any nursing board, school, hospital, licensing authority, or
+      healthcare organization. NCLEX and NCLEX-RN are referenced only to describe the educational
+      practice style and learner audience.
+    </p>
+  </div>
+</section>
+```
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 MedSafety RN. Independent educational practice app.</p>
+      <p>
+        <a href="https://anilkrkalsi.github.io/medsafety-rn-privacy/" target="_blank" rel="noopener">Privacy Policy</a>
+        ·
+        <a href="mailto:anilkrkalsi@gmail.com">Contact Support</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
