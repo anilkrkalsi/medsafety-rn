@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -22,7 +21,6 @@
       --amber: #F5A623;
       --white: #FFFFFF;
       --soft: #D7E3EA;
-      --muted: #AFC0CC;
       --card: rgba(255, 255, 255, 0.08);
       --border: rgba(255, 255, 255, 0.16);
       --darkText: #211A35;
@@ -54,10 +52,9 @@
     }
 
     header {
-      padding: 24px 0;
+      padding: 22px 0;
       border-bottom: 1px solid var(--border);
-      background: rgba(7, 26, 44, 0.82);
-      backdrop-filter: blur(12px);
+      background: rgba(7, 26, 44, 0.94);
       position: sticky;
       top: 0;
       z-index: 10;
@@ -88,9 +85,9 @@
     }
 
     .hero {
-      padding: 72px 0 60px;
+      padding: 68px 0 58px;
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.05fr 0.95fr;
       gap: 42px;
       align-items: center;
     }
@@ -108,7 +105,7 @@
     }
 
     h1 {
-      font-size: clamp(42px, 6vw, 72px);
+      font-size: clamp(40px, 5.2vw, 66px);
       line-height: 1.04;
       margin: 0 0 20px;
       letter-spacing: -0.06em;
@@ -118,7 +115,7 @@
       color: var(--soft);
       font-size: 20px;
       max-width: 700px;
-      margin: 0 0 30px;
+      margin: 0 0 28px;
     }
 
     .cta-row {
@@ -156,6 +153,9 @@
 
     .real-shot {
       width: 100%;
+      height: 520px;
+      object-fit: cover;
+      object-position: top center;
       border-radius: 22px;
       border: 1px solid var(--border);
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.30);
@@ -311,7 +311,7 @@
       }
 
       .hero {
-        padding-top: 46px;
+        padding-top: 42px;
       }
 
       .nav {
@@ -322,9 +322,12 @@
       .nav-links {
         flex-wrap: wrap;
       }
+
+      .real-shot {
+        height: auto;
+      }
     }
   </style>
-
 </head>
 
 <body>
@@ -351,166 +354,163 @@
           common safety decision patterns.
         </p>
 
-```
-    <div class="cta-row">
-      <a class="button" href="https://play.google.com/store/apps/details?id=com.sadhoo.medsafety_rn" target="_blank" rel="noopener">
-        Download on Google Play
-      </a>
-      <a class="button secondary" href="#features">
-        See features
-      </a>
-    </div>
-  </div>
+        <div class="cta-row">
+          <a class="button" href="https://play.google.com/store/apps/details?id=com.sadhoo.medsafety_rn" target="_blank" rel="noopener">
+            Download on Google Play
+          </a>
+          <a class="button secondary" href="#features">
+            See features
+          </a>
+        </div>
+      </div>
 
-  <div class="hero-card">
-    <img class="real-shot" src="01_practice_rn_medication_safety.png" alt="MedSafety RN app screenshot showing NCLEX-style medication safety practice" />
+      <div class="hero-card">
+        <img class="real-shot" src="01_practice_rn_medication_safety.png" alt="MedSafety RN app screenshot showing NCLEX-style medication safety practice" />
 
-    <div class="mock">
-      <h2>Practice RN Medication Safety</h2>
-      <p><strong>Question 1/20</strong></p>
-      <p>A patient is taking warfarin. Which lab value is most important for medication-safety monitoring?</p>
-      <div class="option">A. Serum sodium</div>
-      <div class="option correct">B. INR</div>
-      <div class="option">C. Hemoglobin A1C</div>
-      <div class="option">D. Blood glucose</div>
-      <p class="rationale"><strong>Rationale:</strong> Warfarin therapy requires INR monitoring because abnormal values can increase bleeding risk.</p>
-    </div>
-  </div>
-</section>
+        <div class="mock">
+          <h2>Practice RN Medication Safety</h2>
+          <p><strong>Question 1/20</strong></p>
+          <p>A patient is taking warfarin. Which lab value is most important for medication-safety monitoring?</p>
+          <div class="option">A. Serum sodium</div>
+          <div class="option correct">B. INR</div>
+          <div class="option">C. Hemoglobin A1C</div>
+          <div class="option">D. Blood glucose</div>
+          <p class="rationale"><strong>Rationale:</strong> Warfarin therapy requires INR monitoring because abnormal values can increase bleeding risk.</p>
+        </div>
+      </div>
+    </section>
 
-<section id="features" class="container">
-  <h2>What you get</h2>
-  <p class="section-lead">
-    MedSafety RN is focused on medication-safety practice, not broad exam-course overload.
-  </p>
+    <section id="features" class="container">
+      <h2>What you get</h2>
+      <p class="section-lead">
+        MedSafety RN is focused on medication-safety practice, not broad exam-course overload.
+      </p>
 
-  <div class="grid">
-    <div class="card">
-      <h3>100 included questions</h3>
-      <p>Start practicing medication-safety questions without account creation.</p>
-    </div>
+      <div class="grid">
+        <div class="card">
+          <h3>100 included questions</h3>
+          <p>Start practicing medication-safety questions without account creation.</p>
+        </div>
 
-    <div class="card">
-      <h3>700 total with Pro</h3>
-      <p>Unlock the full 700-question roadmap with one Pro upgrade. No subscription is required.</p>
-    </div>
+        <div class="card">
+          <h3>700 total with Pro</h3>
+          <p>Unlock the full 700-question roadmap with one Pro upgrade. No subscription is required.</p>
+        </div>
 
-    <div class="card">
-      <h3>NCLEX-style practice</h3>
-      <p>Practice focused nursing decision patterns instead of random memorization.</p>
-    </div>
+        <div class="card">
+          <h3>NCLEX-style practice</h3>
+          <p>Practice focused nursing decision patterns instead of random memorization.</p>
+        </div>
 
-    <div class="card">
-      <h3>Rationales</h3>
-      <p>Review explanations after answers so missed questions become learning points.</p>
-    </div>
+        <div class="card">
+          <h3>Rationales</h3>
+          <p>Review explanations after answers so missed questions become learning points.</p>
+        </div>
 
-    <div class="card">
-      <h3>Weak-area review</h3>
-      <p>Identify repeated weak decision areas and return to focused practice.</p>
-    </div>
+        <div class="card">
+          <h3>Weak-area review</h3>
+          <p>Identify repeated weak decision areas and return to focused practice.</p>
+        </div>
 
-    <div class="card">
-      <h3>No login required</h3>
-      <p>Practice progress is stored locally on your device.</p>
-    </div>
-  </div>
-</section>
+        <div class="card">
+          <h3>No login required</h3>
+          <p>Practice progress is stored locally on your device.</p>
+        </div>
+      </div>
+    </section>
 
-<section id="topics" class="container">
-  <h2>Medication-safety topics covered</h2>
-  <p class="section-lead">
-    Practice questions are built around repeated medication-safety decision patterns.
-  </p>
+    <section id="topics" class="container">
+      <h2>Medication-safety topics covered</h2>
+      <p class="section-lead">
+        Practice questions are built around repeated medication-safety decision patterns.
+      </p>
 
-  <div class="topic-list">
-    <div class="topic">Medication administration decisions</div>
-    <div class="topic">Adverse effects</div>
-    <div class="topic">Contraindications</div>
-    <div class="topic">High-alert medication awareness</div>
-    <div class="topic">Lab monitoring</div>
-    <div class="topic">Patient teaching</div>
-    <div class="topic">Safety accuracy tracking</div>
-    <div class="topic">Missed-question review</div>
-  </div>
-</section>
+      <div class="topic-list">
+        <div class="topic">Medication administration decisions</div>
+        <div class="topic">Adverse effects</div>
+        <div class="topic">Contraindications</div>
+        <div class="topic">High-alert medication awareness</div>
+        <div class="topic">Lab monitoring</div>
+        <div class="topic">Patient teaching</div>
+        <div class="topic">Safety accuracy tracking</div>
+        <div class="topic">Missed-question review</div>
+      </div>
+    </section>
 
-<section class="container">
-  <h2>Free vs Pro</h2>
-  <div class="split">
-    <div class="card">
-      <h3>Included</h3>
-      <p><span class="highlight">100 medication-safety practice questions</span> with rationales and progress tracking.</p>
-    </div>
+    <section class="container">
+      <h2>Free vs Pro</h2>
+      <div class="split">
+        <div class="card">
+          <h3>Included</h3>
+          <p><span class="highlight">100 medication-safety practice questions</span> with rationales and progress tracking.</p>
+        </div>
 
-    <div class="card">
-      <h3>Pro unlock</h3>
-      <p><span class="highlight">700 total reviewed questions</span>, complete roadmap access, and full weak-area review. One-time upgrade. No subscription.</p>
-    </div>
-  </div>
-</section>
+        <div class="card">
+          <h3>Pro unlock</h3>
+          <p><span class="highlight">700 total reviewed questions</span>, complete roadmap access, and full weak-area review. One-time upgrade. No subscription.</p>
+        </div>
+      </div>
+    </section>
 
-<section class="container">
-  <h2>Offline-first after install</h2>
-  <p>
-    Practice questions and progress are designed for local use after install.
-    App updates and Pro purchases require Google Play/internet access.
-  </p>
-</section>
+    <section class="container">
+      <h2>Offline-first after install</h2>
+      <p>
+        Practice questions and progress are designed for local use after install.
+        App updates and Pro purchases require Google Play/internet access.
+      </p>
+    </section>
 
-<section id="faq" class="container">
-  <h2>FAQ</h2>
+    <section id="faq" class="container">
+      <h2>FAQ</h2>
 
-  <div class="grid">
-    <div class="card">
-      <h3>Is MedSafety RN an official NCLEX app?</h3>
-      <p>No. MedSafety RN is an independent educational practice app. It is not affiliated with or endorsed by NCSBN, NCLEX, Pearson VUE, nursing boards, schools, or hospitals.</p>
-    </div>
+      <div class="grid">
+        <div class="card">
+          <h3>Is MedSafety RN an official NCLEX app?</h3>
+          <p>No. MedSafety RN is an independent educational practice app. It is not affiliated with or endorsed by NCSBN, NCLEX, Pearson VUE, nursing boards, schools, or hospitals.</p>
+        </div>
 
-    <div class="card">
-      <h3>Do I need an account?</h3>
-      <p>No. The app does not require login or account creation. Practice progress is stored locally on your device.</p>
-    </div>
+        <div class="card">
+          <h3>Do I need an account?</h3>
+          <p>No. The app does not require login or account creation. Practice progress is stored locally on your device.</p>
+        </div>
 
-    <div class="card">
-      <h3>What does Pro unlock?</h3>
-      <p>The included version starts with 100 medication-safety questions. Pro unlocks the full 700-question roadmap with one upgrade. No subscription is required.</p>
-    </div>
-  </div>
-</section>
+        <div class="card">
+          <h3>What does Pro unlock?</h3>
+          <p>The included version starts with 100 medication-safety questions. Pro unlocks the full 700-question roadmap with one upgrade. No subscription is required.</p>
+        </div>
+      </div>
+    </section>
 
-<section id="disclaimer" class="container">
-  <h2>Important disclaimer</h2>
+    <section id="disclaimer" class="container">
+      <h2>Important disclaimer</h2>
 
-  <div class="disclaimer">
-    <p>
-      MedSafety RN is an independent educational practice app. It is not medical advice,
-      clinical instruction, diagnosis, treatment guidance, or a substitute for nursing school,
-      licensed instruction, institutional policy, medication references, or professional judgment.
-    </p>
+      <div class="disclaimer">
+        <p>
+          MedSafety RN is an independent educational practice app. It is not medical advice,
+          clinical instruction, diagnosis, treatment guidance, or a substitute for nursing school,
+          licensed instruction, institutional policy, medication references, or professional judgment.
+        </p>
 
-    <p>
-      This app is not a medical device and does not diagnose, treat, cure, or prevent any
-      medical condition. Consult a qualified healthcare professional for medical advice,
-      diagnosis, or treatment.
-    </p>
+        <p>
+          This app is not a medical device and does not diagnose, treat, cure, or prevent any
+          medical condition. Consult a qualified healthcare professional for medical advice,
+          diagnosis, or treatment.
+        </p>
 
-    <p>
-      MedSafety RN is not affiliated with, endorsed by, sponsored by, or officially provided by
-      NCSBN, NCLEX, Pearson VUE, any nursing board, school, hospital, licensing authority, or
-      healthcare organization. NCLEX and NCLEX-RN are referenced only to describe the educational
-      practice style and learner audience.
-    </p>
+        <p>
+          MedSafety RN is not affiliated with, endorsed by, sponsored by, or officially provided by
+          NCSBN, NCLEX, Pearson VUE, any nursing board, school, hospital, licensing authority, or
+          healthcare organization. NCLEX and NCLEX-RN are referenced only to describe the educational
+          practice style and learner audience.
+        </p>
 
-    <p>
-      Reviewed questions means the content has been checked for educational clarity, app consistency,
-      and practice value. It does not mean clinical approval, regulatory approval, school approval,
-      board approval, or exam-author approval.
-    </p>
-  </div>
-</section>
-```
-
+        <p>
+          Reviewed questions means the content has been checked for educational clarity, app consistency,
+          and practice value. It does not mean clinical approval, regulatory approval, school approval,
+          board approval, or exam-author approval.
+        </p>
+      </div>
+    </section>
   </main>
 
   <footer>
