@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anilkrkalsi.github.io/medsafety-rn/sitemap.xml

@@ -1,529 +1,254 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MedSafety RN: NCLEX Medication Safety Practice</title>
+  <meta name="description" content="Practice medication-safety decisions with 100 included NCLEX-style nursing questions, rationales, weak-area review and offline progress. Android only.">
+  <meta name="theme-color" content="#071b31">
+  <link rel="canonical" href="https://anilkrkalsi.github.io/medsafety-rn/">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="styles.css">
 
-  <title>MedSafety RN – NCLEX-Style Medication Safety Practice</title>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MedSafety RN">
+  <meta property="og:title" content="Practice the decisions behind medication safety.">
+  <meta property="og:description" content="Focused NCLEX-style medication-safety practice with rationales, weak-area review and local progress for nursing learners.">
+  <meta property="og:url" content="https://anilkrkalsi.github.io/medsafety-rn/">
+  <meta property="og:image" content="https://anilkrkalsi.github.io/medsafety-rn/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MedSafety RN medication-safety practice app screens">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Practice the decisions behind medication safety.">
+  <meta name="twitter:description" content="Focused NCLEX-style medication-safety practice for nursing learners on Android.">
+  <meta name="twitter:image" content="https://anilkrkalsi.github.io/medsafety-rn/assets/og-image.png">
 
-  <meta name="description" content="Practice NCLEX-style medication safety questions for nursing learners. 100 included questions, 700 total with Pro, offline-first after install, no account required." />
-
-  <meta property="og:title" content="MedSafety RN – NCLEX-Style Medication Safety Practice" />
-  <meta property="og:description" content="Focused medication-safety practice for nursing learners. 100 included questions, 700 total with Pro, no login required." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="01_practice_rn_medication_safety.png" />
-
-  <style>
-    :root {
-      --navy: #071A2C;
-      --navy2: #102D44;
-      --teal: #00C2B8;
-      --amber: #F5A623;
-      --white: #FFFFFF;
-      --soft: #D7E3EA;
-      --card: rgba(255, 255, 255, 0.08);
-      --border: rgba(255, 255, 255, 0.16);
-      --darkText: #211A35;
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MedSafety RN: NCLEX Prep",
+    "operatingSystem": "Android",
+    "applicationCategory": "EducationalApplication",
+    "description": "An independent educational practice app focused on medication-safety decisions for nursing learners.",
+    "url": "https://play.google.com/store/apps/details?id=com.sadhoo.medsafety_rn",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.sadhoo.medsafety_rn",
+    "author": { "@type": "Person", "name": "Anil Sadhoo" },
+    "creator": { "@type": "Person", "name": "Anil Sadhoo" },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "category": "Free download with optional in-app purchase"
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(180deg, var(--navy), var(--navy2));
-      color: var(--white);
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    .container {
-      width: min(1120px, 92%);
-      margin: 0 auto;
-    }
-
-    header {
-      padding: 22px 0;
-      border-bottom: 1px solid var(--border);
-      background: rgba(7, 26, 44, 0.94);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-    }
-
-    .brand {
-      font-size: 24px;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      font-size: 14px;
-      color: var(--soft);
-    }
-
-    .nav-links a {
-      text-decoration: none;
-    }
-
-    .hero {
-      padding: 68px 0 58px;
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 42px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      padding: 8px 14px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      color: var(--soft);
-      background: rgba(255, 255, 255, 0.06);
-      margin-bottom: 18px;
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    h1 {
-      font-size: clamp(40px, 5.2vw, 66px);
-      line-height: 1.04;
-      margin: 0 0 20px;
-      letter-spacing: -0.06em;
-    }
-
-    .hero p {
-      color: var(--soft);
-      font-size: 20px;
-      max-width: 700px;
-      margin: 0 0 28px;
-    }
-
-    .cta-row {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .button {
-      display: inline-block;
-      text-decoration: none;
-      background: var(--teal);
-      color: #04252A;
-      font-weight: 800;
-      padding: 15px 22px;
-      border-radius: 14px;
-      box-shadow: 0 12px 30px rgba(0, 194, 184, 0.24);
-    }
-
-    .button.secondary {
-      background: transparent;
-      color: var(--white);
-      border: 1px solid var(--border);
-      box-shadow: none;
-    }
-
-    .hero-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 24px;
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
-    }
-
-    .real-shot {
-      width: 100%;
-      height: 520px;
-      object-fit: cover;
-      object-position: top center;
-      border-radius: 22px;
-      border: 1px solid var(--border);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.30);
-      display: block;
-      margin-bottom: 22px;
-    }
-
-    .mock {
-      background: #f4f1fb;
-      color: var(--darkText);
-      border-radius: 22px;
-      padding: 24px;
-    }
-
-    .mock h2 {
-      color: #514195;
-      font-size: 30px;
-      line-height: 1.18;
-      margin: 0 0 18px;
-    }
-
-    .mock p {
-      color: #30294A;
-      margin: 0 0 14px;
-    }
-
-    .mock .option {
-      background: #fff;
-      border: 1px solid #ded9eb;
-      border-radius: 16px;
-      padding: 13px 15px;
-      margin: 10px 0;
-      font-size: 16px;
-    }
-
-    .mock .option.correct {
-      border-color: #00C2B8;
-      background: #E9FFFC;
-      font-weight: 800;
-    }
-
-    .mock .rationale {
-      margin-top: 16px;
-      padding: 14px;
-      background: #fff8e8;
-      border-left: 5px solid #F5A623;
-      border-radius: 12px;
-      font-size: 15px;
-    }
-
-    section {
-      padding: 46px 0;
-    }
-
-    h2 {
-      font-size: 34px;
-      line-height: 1.15;
-      letter-spacing: -0.04em;
-      margin: 0 0 18px;
-    }
-
-    .section-lead {
-      color: var(--soft);
-      max-width: 780px;
-      margin-top: -6px;
-      margin-bottom: 24px;
-      font-size: 18px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 24px;
-    }
-
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 21px;
-    }
-
-    .card p,
-    .card li,
-    section p,
-    footer p {
-      color: var(--soft);
-    }
-
-    ul {
-      padding-left: 20px;
-      margin-bottom: 0;
-    }
-
-    .highlight {
-      color: var(--amber);
-      font-weight: 800;
-    }
-
-    .topic-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .topic {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 14px 16px;
-      color: var(--soft);
-      font-weight: 700;
-    }
-
-    .disclaimer {
-      font-size: 14px;
-      color: var(--soft);
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 20px;
-    }
-
-    footer {
-      padding: 32px 0;
-      border-top: 1px solid var(--border);
-      margin-top: 30px;
-      font-size: 14px;
-    }
-
-    footer a {
-      color: var(--soft);
-    }
-
-    @media (max-width: 900px) {
-      .hero,
-      .grid,
-      .split,
-      .topic-list {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding-top: 42px;
-      }
-
-      .nav {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .nav-links {
-        flex-wrap: wrap;
-      }
-
-      .real-shot {
-        height: auto;
-      }
-    }
-  </style>
+  }
+  </script>
 </head>
-
 <body>
-  <header>
-    <div class="container nav">
-      <div class="brand">MedSafety RN</div>
-      <nav class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#topics">Topics</a>
-        <a href="#faq">FAQ</a>
-        <a href="#disclaimer">Disclaimer</a>
-      </nav>
-    </div>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="MedSafety RN home">
+      <img src="assets/app-icon.webp" alt="" width="44" height="44">
+      <span>MedSafety RN</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#topics">Topics</a>
+      <a href="#access">Free &amp; Pro</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="header-cta" href="https://play.google.com/store/apps/details?id=com.sadhoo.medsafety_rn" target="_blank" rel="noopener noreferrer">Get it on Google Play</a>
   </header>
 
-  <main>
-    <section class="hero container">
-      <div>
-        <span class="eyebrow">Independent educational practice app</span>
-        <h1>NCLEX-style medication safety practice for nursing learners.</h1>
-        <p>
-          Practice medication administration, adverse effects, contraindications,
-          lab monitoring, high-alert medication awareness, patient teaching, and
-          common safety decision patterns.
-        </p>
-
-        <div class="cta-row">
-          <a class="button" href="https://play.google.com/store/apps/details?id=com.sadhoo.medsafety_rn" target="_blank" rel="noopener">
-            Download on Google Play
+  <main id="main-content">
+    <section id="top" class="hero" aria-labelledby="hero-title">
+      <div class="section-shell hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Independent nursing education · Android</div>
+          <div class="app-name">
+            <img src="assets/app-icon.webp" alt="MedSafety RN app icon" width="68" height="68">
+            <div><strong>MedSafety RN</strong><span>NCLEX Prep</span></div>
+          </div>
+          <h1 id="hero-title">Practice the decisions behind medication safety.</h1>
+          <p class="hero-lead">Focused NCLEX-style questions for nursing learners covering medication administration, adverse effects, contraindications, monitoring and patient teaching.</p>
+          <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.sadhoo.medsafety_rn" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+            <img src="assets/google-play-badge.png" alt="Get it on Google Play" width="194" height="75">
           </a>
-          <a class="button secondary" href="#features">
-            See features
-          </a>
+          <div class="hero-facts" aria-label="App access facts">
+            <span><strong>100</strong> questions included</span>
+            <span><strong>700</strong> total with Pro</span>
+            <span><strong>One-time</strong> unlock</span>
+            <span><strong>No</strong> login</span>
+          </div>
         </div>
-      </div>
 
-      <div class="hero-card">
-        <img class="real-shot" src="01_practice_rn_medication_safety.png" alt="MedSafety RN app screenshot showing NCLEX-style medication safety practice" />
-
-        <div class="mock">
-          <h2>Practice RN Medication Safety</h2>
-          <p><strong>Question 1/20</strong></p>
-          <p>A patient is taking warfarin. Which lab value is most important for medication-safety monitoring?</p>
-          <div class="option">A. Serum sodium</div>
-          <div class="option correct">B. INR</div>
-          <div class="option">C. Hemoglobin A1C</div>
-          <div class="option">D. Blood glucose</div>
-          <p class="rationale"><strong>Rationale:</strong> Warfarin therapy requires INR monitoring because abnormal values can increase bleeding risk.</p>
+        <div class="hero-screens" aria-label="MedSafety RN app screenshots">
+          <figure class="hero-screen screen-left"><img src="assets/screenshot-1.webp" alt="Medication-safety practice question in MedSafety RN" width="576" height="1024" fetchpriority="high"></figure>
+          <figure class="hero-screen screen-center"><img src="assets/screenshot-3.webp" alt="Answer rationale explaining a medication-safety decision" width="576" height="1024" fetchpriority="high"></figure>
+          <figure class="hero-screen screen-right"><img src="assets/screenshot-4.webp" alt="Weak-area repair screen listing decision skills to practise" width="576" height="1024" fetchpriority="high"></figure>
         </div>
       </div>
     </section>
 
-    <section id="features" class="container">
-      <h2>What you get</h2>
-      <p class="section-lead">
-        MedSafety RN is focused on medication-safety practice, not broad exam-course overload.
-      </p>
-
-      <div class="grid">
-        <div class="card">
-          <h3>100 included questions</h3>
-          <p>Start practicing medication-safety questions without account creation.</p>
+    <section class="focus section-shell" aria-labelledby="focus-title">
+      <div class="section-heading compact">
+        <p class="section-kicker">Why focused practice</p>
+        <h2 id="focus-title">One high-stakes decision pattern at a time.</h2>
+      </div>
+      <div class="focus-grid">
+        <div class="focus-copy">
+          <p>Broad nursing question banks move across many subjects. MedSafety RN deliberately stays narrow: repeated practice in the medication-safety decisions that nursing learners are expected to recognise and reason through.</p>
+          <p>Each question asks you to choose, question, monitor or teach—not simply recall a drug name. That makes the app a focused practice companion, not a complete nursing course or substitute for trusted clinical references.</p>
         </div>
-
-        <div class="card">
-          <h3>700 total with Pro</h3>
-          <p>Unlock the full 700-question roadmap with one Pro upgrade. No subscription is required.</p>
-        </div>
-
-        <div class="card">
-          <h3>NCLEX-style practice</h3>
-          <p>Practice focused nursing decision patterns instead of random memorization.</p>
-        </div>
-
-        <div class="card">
-          <h3>Rationales</h3>
-          <p>Review explanations after answers so missed questions become learning points.</p>
-        </div>
-
-        <div class="card">
-          <h3>Weak-area review</h3>
-          <p>Identify repeated weak decision areas and return to focused practice.</p>
-        </div>
-
-        <div class="card">
-          <h3>No login required</h3>
-          <p>Practice progress is stored locally on your device.</p>
+        <div class="decision-list" aria-label="Medication-safety decision patterns">
+          <span>What should the nurse monitor?</span>
+          <span>What finding should be questioned?</span>
+          <span>What adverse effect matters?</span>
+          <span>What patient teaching is important?</span>
+          <span>What medication risk should be recognised?</span>
         </div>
       </div>
     </section>
 
-    <section id="topics" class="container">
-      <h2>Medication-safety topics covered</h2>
-      <p class="section-lead">
-        Practice questions are built around repeated medication-safety decision patterns.
-      </p>
-
-      <div class="topic-list">
-        <div class="topic">Medication administration decisions</div>
-        <div class="topic">Adverse effects</div>
-        <div class="topic">Contraindications</div>
-        <div class="topic">High-alert medication awareness</div>
-        <div class="topic">Lab monitoring</div>
-        <div class="topic">Patient teaching</div>
-        <div class="topic">Safety accuracy tracking</div>
-        <div class="topic">Missed-question review</div>
-      </div>
-    </section>
-
-    <section class="container">
-      <h2>Free vs Pro</h2>
-      <div class="split">
-        <div class="card">
-          <h3>Included</h3>
-          <p><span class="highlight">100 medication-safety practice questions</span> with rationales and progress tracking.</p>
+    <section id="how" class="how" aria-labelledby="how-title">
+      <div class="section-shell">
+        <div class="section-heading">
+          <p class="section-kicker">How it works</p>
+          <h2 id="how-title">Practice. Understand. Repair.</h2>
+          <p>Short sessions keep the loop clear enough to repeat whenever you have time.</p>
         </div>
-
-        <div class="card">
-          <h3>Pro unlock</h3>
-          <p><span class="highlight">700 total reviewed questions</span>, complete roadmap access, and full weak-area review. One-time upgrade. No subscription.</p>
+        <div class="steps">
+          <article><span class="step-number">01</span><h3>Answer a focused question</h3><p>Work through a medication-safety scenario and choose the nursing decision you believe is safest or most appropriate.</p></article>
+          <article><span class="step-number">02</span><h3>Review the rationale</h3><p>See why the correct option fits and why the competing choices do not address the key risk or priority.</p></article>
+          <article><span class="step-number">03</span><h3>Repair weak decision areas</h3><p>Return to recurring mistake patterns such as adverse-effect recognition, contraindications, monitoring or patient teaching.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="container">
-      <h2>Offline-first after install</h2>
-      <p>
-        Practice questions and progress are designed for local use after install.
-        App updates and Pro purchases require Google Play/internet access.
-      </p>
+    <section id="features" class="features section-shell" aria-labelledby="features-title">
+      <div class="section-heading split-heading">
+        <div><p class="section-kicker">Features and screenshots</p><h2 id="features-title">Built around the complete learning loop.</h2></div>
+        <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.sadhoo.medsafety_rn" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play"><img src="assets/google-play-badge.png" alt="Get it on Google Play" width="194" height="75"></a>
+      </div>
+      <div class="feature-grid">
+        <article><h3>NCLEX-style questions</h3><p>Medication-safety scenarios built around nursing judgement and priority decisions.</p></article>
+        <article><h3>Answer rationales</h3><p>Explanations appear after questions so mistakes become usable study moments.</p></article>
+        <article><h3>Weak-area review</h3><p>Repeated error patterns point you back to decision skills needing more practice.</p></article>
+        <article><h3>Progress tracking</h3><p>See practice attempts, question history and completed activity on your device.</p></article>
+        <article><h3>Safety accuracy</h3><p>Track your accuracy across focused medication-safety practice sessions.</p></article>
+        <article><h3>Training streak</h3><p>Keep a simple record of recent study consistency without public competition.</p></article>
+        <article><h3>Offline-first learning</h3><p>Questions and local progress remain available after installation without an account.</p></article>
+      </div>
+
+      <div class="gallery" aria-label="MedSafety RN screenshot gallery" tabindex="0">
+        <figure><img src="assets/screenshot-1.webp" alt="Practice RN medication-safety question screen" width="576" height="1024" loading="lazy"><figcaption>Focused questions</figcaption></figure>
+        <figure><img src="assets/screenshot-2.webp" alt="Training home showing 100 free questions and progress summary" width="576" height="1024" loading="lazy"><figcaption>Start with 100</figcaption></figure>
+        <figure><img src="assets/screenshot-3.webp" alt="Question result with answer rationale" width="576" height="1024" loading="lazy"><figcaption>Learn from mistakes</figcaption></figure>
+        <figure><img src="assets/screenshot-4.webp" alt="Repair Vault showing weak medication-safety decision areas" width="576" height="1024" loading="lazy"><figcaption>Find weak areas</figcaption></figure>
+        <figure><img src="assets/screenshot-5.webp" alt="Training progress with safety accuracy and weak-skill summary" width="576" height="1024" loading="lazy"><figcaption>Track safety accuracy</figcaption></figure>
+        <figure><img src="assets/screenshot-6.webp" alt="Seven-hundred-question learning roadmap" width="576" height="1024" loading="lazy"><figcaption>Learning roadmap</figcaption></figure>
+        <figure><img src="assets/screenshot-7.webp" alt="Offline-first profile showing local training progress" width="576" height="1024" loading="lazy"><figcaption>Offline-first practice</figcaption></figure>
+        <figure><img src="assets/screenshot-8.webp" alt="App information and independent-study disclaimer screen" width="576" height="1024" loading="lazy"><figcaption>Independent study aid</figcaption></figure>
+      </div>
+      <p class="gallery-hint">Swipe or scroll to explore all eight real app screens.</p>
     </section>
 
-    <section id="faq" class="container">
-      <h2>FAQ</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Is MedSafety RN an official NCLEX app?</h3>
-          <p>No. MedSafety RN is an independent educational practice app. It is not affiliated with or endorsed by NCSBN, NCLEX, Pearson VUE, nursing boards, schools, or hospitals.</p>
+    <section id="topics" class="topics" aria-labelledby="topics-title">
+      <div class="section-shell topics-grid">
+        <div class="section-heading compact">
+          <p class="section-kicker light">Topics covered</p>
+          <h2 id="topics-title">Medication-safety decisions that repeat across practice.</h2>
+          <p>Questions move across medications and situations while returning to the safety patterns nursing learners need to recognise.</p>
         </div>
-
-        <div class="card">
-          <h3>Do I need an account?</h3>
-          <p>No. The app does not require login or account creation. Practice progress is stored locally on your device.</p>
-        </div>
-
-        <div class="card">
-          <h3>What does Pro unlock?</h3>
-          <p>The included version starts with 100 medication-safety questions. Pro unlocks the full 700-question roadmap with one upgrade. No subscription is required.</p>
-        </div>
+        <ul class="topic-list">
+          <li>Medication administration</li>
+          <li>Adverse effects</li>
+          <li>Contraindications</li>
+          <li>Lab monitoring</li>
+          <li>High-alert medication awareness</li>
+          <li>Patient teaching</li>
+          <li>Common medication-error patterns</li>
+          <li>Priority and safety decisions</li>
+        </ul>
       </div>
     </section>
 
-    <section id="disclaimer" class="container">
-      <h2>Important disclaimer</h2>
+    <section id="access" class="access section-shell" aria-labelledby="access-title">
+      <div class="section-heading centered">
+        <p class="section-kicker">Free versus Pro</p>
+        <h2 id="access-title">Start with 100. Expand only if it helps.</h2>
+        <p>The Android app is free to download. Regional Google Play pricing may vary for the optional Pro unlock.</p>
+      </div>
+      <div class="access-grid">
+        <article class="plan-card free-plan">
+          <div><p class="plan-label">Included</p><h3>Free practice</h3><p>Use the core training loop before deciding whether you need the full roadmap.</p></div>
+          <ul><li>100 medication-safety questions</li><li>Answer rationales</li><li>Progress tracking</li><li>Local and offline-first use</li></ul>
+        </article>
+        <article class="plan-card pro-plan">
+          <div><p class="plan-label">One-time unlock</p><h3>MedSafety RN Pro</h3><p>Continue into the complete question roadmap and full weak-area practice.</p></div>
+          <ul><li>Full 700-question roadmap</li><li>Full weak-area practice</li><li>One-time Google Play purchase</li><li>No recurring subscription</li></ul>
+          <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.sadhoo.medsafety_rn" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play"><img src="assets/google-play-badge.png" alt="Get it on Google Play" width="194" height="75"></a>
+        </article>
+      </div>
+    </section>
 
-      <div class="disclaimer">
-        <p>
-          MedSafety RN is an independent educational practice app. It is not medical advice,
-          clinical instruction, diagnosis, treatment guidance, or a substitute for nursing school,
-          licensed instruction, institutional policy, medication references, or professional judgment.
-        </p>
+    <section id="privacy" class="privacy section-shell" aria-labelledby="privacy-title">
+      <div class="privacy-panel">
+        <div>
+          <p class="section-kicker light">Privacy-first learning</p>
+          <h2 id="privacy-title">Your study progress stays on your device.</h2>
+          <p>MedSafety RN does not require an account and does not use advertising, analytics, tracking SDKs, Firebase or a developer-operated cloud backend. Questions, preferences and progress are stored locally.</p>
+          <p class="privacy-warning">Clearing app data or uninstalling the app may remove locally stored progress. Eligible Pro purchases can be restored through Google Play using the same Google account.</p>
+          <a href="https://anilkrkalsi.github.io/medsafety-rn-privacy/" target="_blank" rel="noopener noreferrer">Read the privacy policy <span aria-hidden="true">↗</span></a>
+        </div>
+        <ul class="privacy-list" aria-label="Privacy features">
+          <li><strong>No login</strong><span>No email, password or social account</span></li>
+          <li><strong>No advertising</strong><span>No ad SDK or behavioural targeting</span></li>
+          <li><strong>No analytics or tracking</strong><span>No study-behaviour analytics provider</span></li>
+          <li><strong>No cloud backend</strong><span>Progress remains in local app storage</span></li>
+        </ul>
+      </div>
+    </section>
 
-        <p>
-          This app is not a medical device and does not diagnose, treat, cure, or prevent any
-          medical condition. Consult a qualified healthcare professional for medical advice,
-          diagnosis, or treatment.
-        </p>
-
-        <p>
-          MedSafety RN is not affiliated with, endorsed by, sponsored by, or officially provided by
-          NCSBN, NCLEX, Pearson VUE, any nursing board, school, hospital, licensing authority, or
-          healthcare organization. NCLEX and NCLEX-RN are referenced only to describe the educational
-          practice style and learner audience.
-        </p>
-
-        <p>
-          Reviewed questions means the content has been checked for educational clarity, app consistency,
-          and practice value. It does not mean clinical approval, regulatory approval, school approval,
-          board approval, or exam-author approval.
-        </p>
+    <section id="faq" class="faq section-shell" aria-labelledby="faq-title">
+      <div class="section-heading compact">
+        <p class="section-kicker">Frequently asked questions</p>
+        <h2 id="faq-title">Important before you begin.</h2>
+      </div>
+      <div class="faq-list">
+        <details><summary>Is MedSafety RN an official NCLEX app?</summary><p>No. It is an independent educational practice app and is not affiliated with, endorsed by or approved by NCSBN, NCLEX, Pearson VUE, nursing boards or licensing authorities.</p></details>
+        <details><summary>Who is the app designed for?</summary><p>It is designed for nursing students, NCLEX-RN learners, repeat test takers, international nurses reviewing U.S.-style questions and pharmacology learners seeking focused medication-safety practice.</p></details>
+        <details><summary>How many questions are included?</summary><p>The free version includes 100 medication-safety questions. The complete roadmap contains 700 reviewed questions.</p></details>
+        <details><summary>What does Pro unlock?</summary><p>Pro unlocks the full 700-question roadmap and full weak-area practice through an optional Google Play purchase.</p></details>
+        <details><summary>Is Pro a subscription?</summary><p>No. Pro is a one-time purchase. There is no recurring subscription, although regional pricing may vary.</p></details>
+        <details><summary>Does the app work offline?</summary><p>Questions and local progress work offline after installation. Google Play and internet access are still required for installation, updates, purchase and restoration.</p></details>
+        <details><summary>Where is progress stored?</summary><p>Progress is stored locally on your Android device. The app has no developer-operated cloud synchronization, so clearing app data or uninstalling may remove it.</p></details>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      <p>© 2026 MedSafety RN. Independent educational practice app.</p>
-      <p>
-        <a href="https://anilkrkalsi.github.io/medsafety-rn-privacy/" target="_blank" rel="noopener">Privacy Policy</a>
-        ·
-        <a href="mailto:anilkrkalsi@gmail.com">Contact Support</a>
-        ·
-        <a href="https://play.google.com/store/apps/details?id=com.sadhoo.medsafety_rn" target="_blank" rel="noopener">Google Play</a>
-      </p>
+    <div class="section-shell footer-cta">
+      <div><p class="section-kicker light">Focused medication-safety practice</p><h2>Build a stronger study loop—one decision at a time.</h2></div>
+      <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.sadhoo.medsafety_rn" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play"><img src="assets/google-play-badge.png" alt="Get it on Google Play" width="194" height="75"></a>
+    </div>
+    <div class="section-shell footer-main">
+      <div class="footer-brand"><a class="brand" href="#top"><img src="assets/app-icon.webp" alt="" width="42" height="42"><span>MedSafety RN</span></a><p>Independent medication-safety practice for nursing learners on Android.</p></div>
+      <div class="footer-links"><a href="https://play.google.com/store/apps/details?id=com.sadhoo.medsafety_rn" target="_blank" rel="noopener noreferrer">Google Play</a><a href="https://anilkrkalsi.github.io/medsafety-rn-privacy/" target="_blank" rel="noopener noreferrer">Privacy policy</a><a href="mailto:anilkrkalsi@gmail.com">Support</a></div>
+    </div>
+    <div class="section-shell disclaimer">
+      <p>MedSafety RN is for educational practice only. It does not provide medical or clinical advice and is not a substitute for nursing education, institutional policy, current medication references or professional judgement. It is not a medical device and does not guarantee examination, clinical-performance or patient outcomes. MedSafety RN is independent and unaffiliated with NCSBN, NCLEX, Pearson VUE, nursing boards, schools, hospitals or healthcare organisations.</p>
+      <p>© 2026 Anil Sadhoo. All rights reserved.</p>
     </div>
   </footer>
+
+  <a class="play-badge mobile-install" href="https://play.google.com/store/apps/details?id=com.sadhoo.medsafety_rn" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play"><img src="assets/google-play-badge.png" alt="Get it on Google Play" width="194" height="75"></a>
 </body>
 </html>

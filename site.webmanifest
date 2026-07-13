@@ -1,0 +1,16 @@
+{
+  "name": "MedSafety RN: NCLEX Prep",
+  "short_name": "MedSafety RN",
+  "description": "Independent medication-safety practice for nursing learners on Android.",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#071b31",
+  "theme_color": "#071b31",
+  "icons": [
+    {
+      "src": "assets/app-icon.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
+}
